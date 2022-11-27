@@ -1,0 +1,14 @@
+.navigation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 167px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end; }
+
+.navigation-item {
+  margin-right: 38px; }
+
+.navigation-item:last-child {
+  margin-right: 0; }
