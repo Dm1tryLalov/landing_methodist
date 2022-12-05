@@ -17,8 +17,9 @@ body {
   background-color: #B59797;
   color: #3C2A2A;
   min-height: 100%;
-  display: flex;
+  /*display: flex;
   flex-direction: column;
+  width: 100%;*/
 }
 
 .container {
@@ -82,7 +83,7 @@ a {
 }
 
 .about_me {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 18px;
   line-height: 150%;
   margin-left: 50px;
@@ -92,7 +93,6 @@ a {
 }
 
 .text {
-  margin-bottom: 150px;
   max-width: 630px;
   text-indent: 15px;
 }
@@ -105,22 +105,8 @@ a {
   list-style: inside;
 }
 
-.wrapper_navigation-button {
-  position: relative;
-  width: 1260px;
-  /*отступ для кнопок*/
-  height: 150px;
-}
-
-.navigation-button {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-}
-
 .images_main {
   position: relative;
-  margin-right: 140px;
 }
 
 .white_block {
@@ -133,50 +119,54 @@ a {
   right: -200px;
 }
 
-/**************************************grid*/
-.grid-container {
+.navigation-button {
   margin-bottom: 134px;
   font-size: 20px;
   line-height: 24px;
-  display: grid;
-  grid-template-columns: 560px 560px;
-  grid-template-rows: 103px 103px;
-  gap: 20px 40px;
-  grid-template-areas:
-    ". item-1"
-    "item-2 item-3";
 }
 
-.grid-item-1,
-.grid-item-2,
-.grid-item-3 {
+/**************************************flex*/
+.flex-container {
+  display: flex;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  justify-content: end;
+}
+
+.flex-item-1 {
+  margin-right: 41px;
+}
+
+.flex-item-2 {
+  margin-right: 40px;
+}
+
+.flex-item-3 {
+  margin-right: 40px;
+}
+
+.flex-item-1,
+.flex-item-2,
+.flex-item-3 {
   position: relative;
   background-color: #FBF6F6;
   display: flex;
   align-items: center;
+  width: 560px;
+  height: 103px;
+  margin-bottom: 20px;
 }
 
-.wrapper_grid-item {
+.wrapper_flex-item {
   padding-left: 94px;
 }
 
-.grid-item-1 {
-  grid-area: item-1;
-}
+/*:after*/
 
-.grid-item-2 {
-  grid-area: item-2;
-}
-
-.grid-item-3 {
-  grid-area: item-3;
-}
-
-/*::after*/
-
-.grid-item-1::after,
-.grid-item-2::after,
-.grid-item-3::after {
+.flex-item-1::after,
+.flex-item-2::after,
+.flex-item-3::after {
   content: "";
   background-image: url(../img/vector_button.svg);
   background-repeat: no-repeat;
@@ -192,6 +182,7 @@ a {
 
 .footer {
   background-color: #3C2A2A;
+  min-width: 100%;
   max-height: 265px;
   color: #FBF6F6;
   font-weight: 400;
@@ -224,3 +215,5 @@ a {
   color: #FBF6F6;
   text-decoration-line: underline;
 }
+
+/*адаптивность сайта*/
